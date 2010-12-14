@@ -1,8 +1,8 @@
 #!/usr/bin/python
-#
-# pyxhook -- an extension to emulate some of the PyHook library on linux.
-#
-#    Copyright (C) 2008 Tim Alexander <dragonfyre13@gmail.com>
+# 
+# thinkVolume -- A volume controller for Lenovo ThinkPad T400s (TM)
+# 
+#    Copyright (C) 2010 Sho Nakatani <lay.sakura@gmail.com>
 #
 #    This program is free software; you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -18,31 +18,21 @@
 #    along with this program; if not, write to the Free Software
 #    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
-#    Thanks to Alex Badea <vamposdecampos@gmail.com> for writing the Record
-#    demo for the xlib libraries. It helped me immensely working with these
-#    in this library.
-#
-#    Thanks to the python-xlib team. This wouldn't have been possible without
-#    your code.
-#    
-#    This requires: 
-#    at least python-xlib 1.4
-#    xwindows must have the "record" extension present, and active.
-#    
-#    This file has now been somewhat extensively modified by 
-#    Daniel Folkinshteyn <nanotube@users.sf.net>
-#    So if there are any bugs, they are probably my fault. :)
+#    This software uses most of the 'pyxhook.py' code in pykeylogger project.
+#        http://sourceforge.net/projects/pykeylogger/
+#    Thanks to Tim Alexander, and every developer in the project.
+
 
 import sys
-import os
 import re
 import time
 import threading
-import Image
 
-from Xlib import X, XK, display, error
+from Xlib import X, XK, display
 from Xlib.ext import record
 from Xlib.protocol import rq
+
+import amixer
 
 #######################################################################
 ########################START CLASS DEF################################
@@ -109,11 +99,11 @@ class HookManager(threading.Thread):
     
     def volumectl(self, keynum):
         if keynum == 269025042: # Mute/Unmute
-            print('mute')
+            amixer.togglemute()
         elif keynum == 269025041: # Volume down
-            print('vol down')
+            amixer.voldown()
         elif keynum == 269025043: # Volume up
-            print('vol up')
+            amixer.volup()
     
     def HookKeyboard(self):
         pass
