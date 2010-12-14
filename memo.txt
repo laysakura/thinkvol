@@ -1,0 +1,21 @@
+音量を設定する
+	amixer set Master 50%
+
+音量の設定を取得する
+	amixer set Master
+[出力]
+Simple mixer control 'Master',0
+  Capabilities: pvolume pswitch pswitch-joined penum
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 74
+  Mono:
+  Front Left: Playback 74 [100%] [0.00dB] [on]
+  Front Right: Playback 74 [100%] [0.00dB] [on]
+
+ミュートにする
+	amixer set Master mute
+
+    ミュート時は， [on] が [off] になる
+
+ミュート解除
+	amixer set Master unmute
