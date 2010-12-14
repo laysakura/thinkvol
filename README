@@ -4,26 +4,26 @@ Sho Nakatani <lay.sakura@gmail.com>
 Description
 	This program is for users who Lenovo ThinkPad T400s, Linux.
 	If the volume buttons (mute/unmute, voldown, volup) are not enabled for some reasons
-    (e.g. your window manager doesn't support them), this will help you.
+	(e.g. your window manager doesn't support them), this will help you.
 
 	Once you run this program, the volume buttons will correctly work.
 
 Usage
-    Example in Ubuntu:
-        Make a script named /usr/local/bin/thinkvol
+	Example in Ubuntu:
+		Make a script named /usr/local/bin/thinkvol
 
-            #!/bin/bash
-            /usr/bin/python /path/to/this/directory/hook.py &
-        
-        Now you can run 'thinkvol' command.
+			#!/bin/bash
+			/usr/bin/python /path/to/this/directory/hook.py &
+		
+		Now you can run 'thinkvol' command.
 
-        Press the volume buttons and check if you can control volumes.
+		Press the volume buttons and check if you can control volumes.
 
-        If you like, make 'thinkvol' run each time you login.
-        I, as an awesome WM user, wrote some code in ~/.config/awesome/rc.lua
+		If you like, make 'thinkvol' run each time you login.
+		I, as an awesome WM user, wrote some code in ~/.config/awesome/rc.lua
 
 Caution
-    Never kill this program manually.
-    I know if you do that, your X Window System will down...
-    (Actually, this program doesn't free resouce on stop.)
+	Never kill this program manually.
+	I know if you do that, your X Window System will down...
+	(Actually, this program doesn't free resouce on stop.)
 	
