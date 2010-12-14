@@ -1,6 +1,4 @@
-#!/usr/bin/python
-# 
-# thinkVolume -- A volume controller for Lenovo ThinkPad T400s (TM)
+# ThinkVolume -- A volume controller for Lenovo ThinkPad T400s (TM)
 # 
 #    Copyright (C) 2010 Sho Nakatani <lay.sakura@gmail.com>
 #
@@ -175,5 +173,5 @@ if __name__ == '__main__':
     hm.HookKeyboard()
     hm.KeyDown = hm.volumectl
     hm.start()
-    time.sleep(10)
-    hm.cancel()
+#    time.sleep(10)
+#    hm.cancel()
