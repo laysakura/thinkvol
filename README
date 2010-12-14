@@ -10,6 +10,9 @@ Description
 
 Usage
 	Example in Ubuntu:
+		Install python-xlib
+			# apt-get install python-xlib
+
 		Make a script named /usr/local/bin/thinkvol
 
 			#!/bin/bash
